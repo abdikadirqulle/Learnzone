@@ -8,27 +8,30 @@ import Testimonial from "./components/testmonial/Testimonial";
 
 const App = () => {
   return (
-    <div className="max-w-6xl mx-auto h-screen flex flex-col gap-10 ">
+    <div className="relative gap-10">
       {/* Header  */}
+      <div className="fixed w-full bg-white shadow z-50">
       <Header />
-      {/* Menu  */}
-      <Menu />
-      {/* Trusted*/}
-      <Compains />
-      {/* CAT */}
-      <About />
-      {/* Courses*/}
-      <Courses />
-      {/* another CAT */}
-      
-      {/* testimonial */}
-      <Testimonial />
-      {/* Trusted */}
-      
-      {/* Last CAT */}
+      </div>
+      <div className="relative max-w-6xl mx-auto h-screen flex flex-col gap-10 px-2 pt-[7rem]">
+        {/* Menu  */}
+        <Menu />
+        {/* Trusted*/}
+        <Compains />
+        {/* CAT */}
+        <About />
+        {/* Courses*/}
+        <Courses />
+        {/* another CAT */}
 
-      {/* footer */}
-      <Footer />
+        {/* testimonial */}
+        <Testimonial />
+        {/* Trusted */}
+
+        {/* Last CAT */}
+        <Footer />
+        {/* footer */}
+      </div>
     </div>
   );
 }
