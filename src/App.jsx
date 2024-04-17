@@ -23,7 +23,7 @@ const App = () => {
         {/* Courses*/}
         <Courses />
         {/* another CAT */}
-        <h1>About Us</h1>
+
         {/* testimonial */}
         <Testimonial />
         {/* Trusted */}
