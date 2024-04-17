@@ -67,13 +67,13 @@ const Header = () => {
           <li className="text-md font-medium ">
             <Link to="">Home</Link>
           </li>
-          <li className='font-normal hover:font-medium'>
+          <li className="font-normal hover:font-medium">
             <Link to="">About</Link>
           </li>
-          <li>
+          <li className="font-normal hover:font-medium">
             <Link to="">Courses</Link>
           </li>
-          <li>
+          <li className="font-normal hover:font-medium">
             <Link to="">Contact Us</Link>
           </li>
         </ul>
@@ -95,8 +95,9 @@ const Header = () => {
       </div>
       {open && (
         <div
-        // ref={menuRef}
-        className="absolute md:hidden top-0 right-0 w-[17rem] h-screen bg-white">
+          // ref={menuRef}
+          className="absolute md:hidden top-0 right-0 w-[17rem] h-screen bg-white"
+        >
           <div className="relative flex flex-col items-center justify-center space-y-[10rem] pt-20">
             <ul className="flex flex-col items-center justify-center space-y-10">
               <li className="text-secondary font-medium">

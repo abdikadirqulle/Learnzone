@@ -12,8 +12,8 @@ const Menu = () => {
           Is Now  More <span className="text-primary">Easy</span>
         </h1>
 
-        <p className="text-sm font-normal text-center md:text-start">
-          We aspire to create outstanding academy that promote
+        <p className="text-md font-light text-center md:text-start">
+          <span></span>We aspire to create outstanding academy that promote
           <br /> educational excellence, character development and
           service to communities.
         </p>
@@ -22,7 +22,7 @@ const Menu = () => {
           <button className="bg-primaryBlue w-full  md:w-1/2 text-center font-medium rounded-full py-3 px-12 text-white text-lg text-nowrap">
             Join for Free.
           </button>
-          <button className="bg-secondary border-2 border-blue-400 w-full  text-center font-medium rounded-full py-3 px-12 text-secondary text-lg text-nowrap">
+          <button className="bg-secondary border-2 hover:bg-blue-100 border-blue-400 w-full  text-center font-medium rounded-full py-3 px-12 text-secondary text-lg text-nowrap">
             Get Unlimited Learning
           </button>
         </div>
