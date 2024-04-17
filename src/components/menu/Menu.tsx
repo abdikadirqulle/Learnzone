@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import visual from '../../../public/visual.png';
+import visual from "../../assets/visual.png";
 
 const Menu = () => {
   return (
@@ -30,7 +30,7 @@ const Menu = () => {
 
       <div className="">
         <img
-          src="../../../public/visual.png"
+          src={visual}
           alt="visual"
           className="w-[34rem]"
         />
