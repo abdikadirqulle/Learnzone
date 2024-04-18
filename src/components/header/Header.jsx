@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
+import { BsMortarboard } from "react-icons/bs";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -61,22 +62,41 @@ const Header = () => {
 
   return (
     <nav className="headers relative max-w-6xl mx-auto  flex items-center justify-between px-4 py-2">
-      <h1 className="text-3xl text-primary font-bold cursor-pointer">
-        <Link to="/">LearnZone</Link>
-      </h1>
+      <Link to="/" className="flex gap-2 flex-nowrap items-center">
+          <BsMortarboard className="w-7 h-7 text-primary" />
+        <h1 className="text-2xl text-primary font-bold cursor-pointer">
+          LearnZone
+        </h1>
+      </Link>
 
       <nav>
         <ul className="md:flex items-center space-x-10 hidden text-secondary">
-        <li className={`${pathname === "/" ? "font-bold text-primary" : "font-normal"}  hover:font-medium`}>
+          <li
+            className={`${
+              pathname === "/" ? "font-bold text-primary" : "font-normal"
+            }  `}
+          >
             <Link to="">Home</Link>
           </li>
-          <li className={`${pathname === "/about" ? "font-bold text-primary" : "font-normal"}  hover:font-medium`}>
+          <li
+            className={`${
+              pathname === "/about" ? "font-bold text-primary" : "font-normal"
+            }  `}
+          >
             <Link to="about">About</Link>
           </li>
-          <li className={`${pathname === "/courses" ? "font-bold text-primary" : "font-normal"}  hover:font-medium`}>
+          <li
+            className={`${
+              pathname === "/courses" ? "font-bold text-primary" : "font-normal"
+            }  `}
+          >
             <Link to="courses">Courses</Link>
           </li>
-          <li className={`${pathname === "/contact" ? "font-bold text-primary" : "font-normal"}  hover:font-medium`}>
+          <li
+            className={`${
+              pathname === "/contact" ? "font-bold text-primary" : "font-normal"
+            }  `}
+          >
             <Link to="contact">Contact Us</Link>
           </li>
         </ul>
@@ -103,18 +123,48 @@ const Header = () => {
         >
           <div className="relative flex flex-col items-center justify-center space-y-[10rem] pt-20">
             <ul className="flex flex-col items-center justify-center space-y-16">
-            <li className={`${pathname === "/" ? "font-bold text-primary" : "font-medium"}`}>
-            <Link to="" onClick={() => setOpen(false)}>Home</Link>
-          </li>
-          <li className={`${pathname === "/about" ? "font-bold text-primary" : "font-medium"}`}>
-            <Link to="about" onClick={() => setOpen(false)}>About</Link>
-          </li>
-          <li className={`${pathname === "/courses" ? "font-bold text-primary" : "font-medium"}`}>
-            <Link to="courses" onClick={() => setOpen(false)}>Courses</Link>
-          </li>
-          <li className={`${pathname === "/contact" ? "font-bold text-primary" : "font-medium"}`}>
-            <Link to="contact" onClick={() => setOpen(false)}>Contact Us</Link>
-          </li>
+              <li
+                className={`${
+                  pathname === "/" ? "font-bold text-primary" : "font-medium"
+                }`}
+              >
+                <Link to="" onClick={() => setOpen(false)}>
+                  Home
+                </Link>
+              </li>
+              <li
+                className={`${
+                  pathname === "/about"
+                    ? "font-bold text-primary"
+                    : "font-medium"
+                }`}
+              >
+                <Link to="about" onClick={() => setOpen(false)}>
+                  About
+                </Link>
+              </li>
+              <li
+                className={`${
+                  pathname === "/courses"
+                    ? "font-bold text-primary"
+                    : "font-medium"
+                }`}
+              >
+                <Link to="courses" onClick={() => setOpen(false)}>
+                  Courses
+                </Link>
+              </li>
+              <li
+                className={`${
+                  pathname === "/contact"
+                    ? "font-bold text-primary"
+                    : "font-medium"
+                }`}
+              >
+                <Link to="contact" onClick={() => setOpen(false)}>
+                  Contact Us
+                </Link>
+              </li>
             </ul>
 
             <div className="flex flex-col w-full gap-4">

@@ -1,21 +1,21 @@
-import aws from "./images/LocalCompanie/Top/aws.png";
-import campus from "./images/LocalCompanie/Top/campus.png";
-import dragon from "./images/LocalCompanie/Top/dragon.png";
-import edal from "./images/LocalCompanie/Top/edal.png";
-import ipro from "./images/LocalCompanie/Top/ipro.png";
-import janel from "./images/LocalCompanie/Top/janel.png";
-import jouban from "./images/LocalCompanie/Top/jouban.png";
-import jawaaz from "./images/LocalCompanie/Top/jawa'az.png";
+import aws from "./images/LocalCompanies/aws.png";
+import campus from "./images/LocalCompanies/campus.png";
+import dragon from "./images/LocalCompanies/dragon.png";
+import edal from "./images/LocalCompanies/edal.png";
+import ipro from "./images/LocalCompanies/ipro.png";
+import janel from "./images/LocalCompanies/janel.png";
+import jouban from "./images/LocalCompanies/jouban.png";
+import jawaaz from "./images/LocalCompanies/jawa'az.png";
 
 
 
-import google from "./images/google.svg";
-import RealAws from "./images/aws.svg";
-import bmw from "./images/bmw.svg";
-import figma from "./images/figma.svg";
-import meta from "./images/meta.svg";
-import microsoft from "./images/microsoft.svg";
-import netflix from "./images/netflix.svg";
+import google from "./images/BigCompanies/google.svg";
+import RealAws from "./images/BigCompanies/aws.svg";
+import bmw from "./images/BigCompanies/bmw.svg";
+import figma from "./images/BigCompanies/figma.svg";
+import meta from "./images/BigCompanies/meta.svg";
+import microsoft from "./images/BigCompanies/microsoft.svg";
+import netflix from "./images/BigCompanies/netflix.svg";
 
 export const LocalBrands = [
   {

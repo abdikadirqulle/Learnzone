@@ -1,12 +1,12 @@
 
-import visual from "../../assets/visual.png";
+import visual from "../../assets/images/visual.png";
 
 const Menu = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center  justify-between gap-6 pt-4">
+    <div className="max-w-6xl mx-auto  px-2 flex flex-col md:flex-row items-center  justify-between gap-6 pt-4">
       <div className="flex flex-col items-center md:items-start space-y-16">
         <div className='flex flex-col gap-4'>
-        <h1 className="relative font-bold text-5xl text-secondary leading-normal text-center md:text-start">
+        <h1 className="relative font-bold text-5xl text-secondary leading-snug text-center md:text-start">
           Getting <span className="text-primary ">Quality</span> <br /> Education
           Is Now  More <span className="text-primary">Easy</span>
         </h1>
