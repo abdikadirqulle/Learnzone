@@ -1,4 +1,3 @@
-import React from 'react'
 import { LocalBrands } from '../../assets/LocalBrands'
 
 const members = [
@@ -23,8 +22,8 @@ const members = [
 const Compains = () => {
   return (
     <div className='flex flex-col gap-10 bg-tertiary p-4 rounded-md'>
-        <div className='flex flex-col space-y-4 md:space-y-3 mt-10'>
-            <h1 className='text-md font-medium text-center md:text-lg  z-10'>We collaborate with leading education providers and organisations</h1>
+        <div className='flex flex-col space-y-4 md:space-y-3 pb-10'>
+            <h1 className='text-md font-medium text-center md:text-md z-10'>We collaborate with leading education providers and organisations</h1>
             <div className='flex gap-4 flex-wrap items-center justify-center xl:justify-start'>
                 {LocalBrands.map((brands)=> (
                     <>
@@ -36,7 +35,7 @@ const Compains = () => {
             </div>
             
         </div>
-        <LocalBrand />
+        {/* <LocalBrand /> */}
     </div>
   )
 }
