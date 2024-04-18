@@ -1,4 +1,3 @@
-import React from 'react'
 
 import visual from "../../assets/visual.png";
 
@@ -32,7 +31,7 @@ const Menu = () => {
         <img
           src={visual}
           alt="visual"
-          className="w-[34rem]"
+          className="w-[700px]"
         />
       </div>
     </div>
