@@ -38,7 +38,7 @@ a {
     justify-content: center;
 }
 .footer .share a:hover{
-    background-color: darkblue;
+    background-color: #0068D9;
 
 }
 .footer .credite{
@@ -52,5 +52,9 @@ a {
 }
 span {
     font-weight: 500;
+}
+
+a{
+    cursor: pointer;
 }
 

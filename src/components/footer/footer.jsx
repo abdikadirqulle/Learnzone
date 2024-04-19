@@ -7,27 +7,29 @@ const Footer = () => {
     <footer className="footer">
       <section className="">
         <div className="share">
-          <a href="#" className="fab fa-facebook - f">
+          <a className="fab fa-facebook - f">
             <FaFacebook />
           </a>
-          <a href="#" className="fab fa-twitter">
+          <a className="fab fa-twitter">
             <FaTwitter />
           </a>
-          <a href="#" className="fab fa-linkedin">
+          <a className="fab fa-linkedin">
             <FaLinkedin />
           </a>
-          <a href="#" className="fab fa-instagram">
+          <a className="fab fa-instagram">
             <FaInstagram />
           </a>
-          <a href="#" className="fab fa-youtube">
+          <a className="fab fa-youtube">
             <FaYoutube />
           </a>
         </div>
 
         <div className="credit">
           &copy; copyright @ 2024 by{" "}
-          <span style={{}} className="text-primary ">learn zone</span> | all rights
-          reserved!
+          <span style={{}} className="text-primary ">
+            learn zone
+          </span>{" "}
+          | all rights reserved!
         </div>
       </section>
     </footer>
