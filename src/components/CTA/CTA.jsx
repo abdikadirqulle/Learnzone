@@ -1,7 +1,9 @@
 import Ai from "../../assets/images/Ai.webp"
 import platformImg from "../../assets/images/platform-hero.webp"
 
-import { FaLongArrowAltRight } from "react-icons/fa";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
+
+
 const CTA = () => {
   return (
     <div className="max-w-6xl mx-auto  px-2 mt-10 flex flex-col gap-10 ">
@@ -27,9 +29,9 @@ const CTA = () => {
             impact, greater results.
           </span>
 
-          <button className="bg-primaryBlue text-center text-white font-medium py-1.5 px-8 rounded-md flex items-center justify-center gap-4">
+          <button className="bg-primaryBlue text-center text-white font-medium py-2 px-8 rounded-md md:rounded ml-3 flex gap-2 items-center justify-center">
             Learn More
-            <FaLongArrowAltRight className="w-7 h-7"/>
+            <HiOutlineArrowNarrowRight className="w-6 h-6"/>
           </button>
         </div>
 
@@ -73,7 +75,7 @@ export const AnotherCTA = () => {
           Join now to receive personalized recommendations from the full LearnZone catalog.
           </span>
 
-          <button className="bg-primaryBlue text-center text-white font-medium py-1.5 px-8 rounded-md md:rounded-full">
+          <button className="bg-primaryBlue text-center text-white font-medium py-2 px-8 rounded-md md:rounded ml-3">
             Get started
           </button>
         </div>
