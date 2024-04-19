@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import About from './components/CTA/About.jsx';
+import About from './components/about/About.jsx';
 import Hero from './components/Hero.jsx';
 import Courses from './components/courses/Courses.jsx';
 import Contact from './components/contact/Contact.jsx';

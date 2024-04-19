@@ -1,9 +1,9 @@
 
 import Menu from './menu/Menu';
 import Compains, { Mentor, Trused } from './compains/Compains';
-import CTA  from './CTA/CTA';
 import Courses from './courses/Courses';
 import Testimonial from './testmonial/Testimonial';
+import CTA from './about/CTA';
 
 const Hero = () => {
   return (
