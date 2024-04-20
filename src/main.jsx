@@ -7,12 +7,15 @@ import About from './components/about/About.jsx';
 import Hero from './components/Hero.jsx';
 import Courses from './components/courses/Courses.jsx';
 import Contact from './components/contact/Contact.jsx';
+import NotFound from './components/not-found.jsx';
+import CourseId from './components/courses/CourseId.jsx';
 
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
+      errorElement : <NotFound />,
 
       children : [
         {
@@ -26,6 +29,10 @@ const router = createBrowserRouter([
         {
             path: "/courses",
             element: <Courses />
+        },
+        {
+            path: "/courses/:id",
+            element: <CourseId />
         },
         {
             path: "/contact",

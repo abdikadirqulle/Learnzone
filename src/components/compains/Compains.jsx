@@ -63,7 +63,7 @@ export const Trused = () => {
         <div className="max-w-6xl mx-auto  px-2 flex flex-wrap items-center justify-center md:justify-between gap-4 ">
           {members.map((member) => (
             <>
-              <div className="rounded-md px-10 py-5 flex flex-col items-center justify-center ">
+              <div key={member.name} className="rounded-md px-10 py-5 flex flex-col items-center justify-center ">
                 <h1 className="text-3xl font-extrabold text-white ">
                   {member.rate}
                 </h1>

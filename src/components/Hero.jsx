@@ -15,7 +15,8 @@ const Hero = () => {
       {/* CAT */}
       <CTA />
       {/* Courses*/}
-      <Courses />
+      {/* <Courses /> */}
+      courses 
       {/* testimonial */}
       <Testimonial />
       {/* another Trusted */}

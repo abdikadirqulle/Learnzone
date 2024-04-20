@@ -42,7 +42,7 @@ const Testimonial = () => {
         {Testimonials.map((Testimonial) => (
           <div
             key={Testimonial.image}
-            className="flex flex-col  justify-between md:w-1/2 gap-6 h-full gap- p-5 border-2 border-dashed border-blue-600  rounded-md "
+            className="flex flex-col  justify-between md:w-1/2 gap-6 h-full gap- p-5 border-2  border-blue-600  rounded-md "
           >
             <p>{Testimonial.quote}</p>
 
