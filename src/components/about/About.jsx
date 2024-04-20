@@ -1,20 +1,20 @@
 import threeDots from "../../assets/images/dots.png"
-
+import "./about.css"
 
 const About = () => {
   return (
-    <div className="relative w-full h-full">
-      <div className="max-w-6xl mx-auto pb-[4rem] px-3">
-        <div className="flex flex-col items-center">
-          <div className="flex flex-col text-center gap-2">
-            <h1 className="text-primary uppercase  font-bold text-xl">
+    <div className="relative w-full h-full pb-10">
+      <div className="contact max-w-6xl mx-auto  ">
+        <div className="main">
+          <div className="header">
+            <h1 className="contactTitle">
               About Us
             </h1>
             <h1 className="text-[32px] font-extrabold">Introduction</h1>
           </div>
 
-          <div className="flex items-center justify-center pt-10">
-            <p className="text-lg md:w-2/3">
+          <div className="hero">
+            <p className="HeroDescription">
               When we started Learnzone Online Courses back in 2018, our goal
               was to give Somalis from all across the world the ability to learn
               the skills they’d need to succeed in this modern century. We set
@@ -29,18 +29,18 @@ const About = () => {
             </p>
           </div>
 
-          <div className="pt-10 flex flex-col items-center justify-center gap-4">
-            <h1 className=" font-extrabold text-[32px]">Our Vision</h1>
-            <p className="text-lg md:w-2/3">
+          <div className="hero">
+            <h1 className="HeroTitle">Our Vision</h1>
+            <p className="HeroDescription">
               To reach out to all Somali communities through knowledge and to be
               a comprehensive online institute that offers quality-oriented
               education and accredited certification.
             </p>
           </div>
 
-          <div className="pt-10 flex flex-col items-center justify-center gap-4">
-            <h1 className=" font-extrabold text-[32px]">Our Mission</h1>
-            <p className="text-lg md:w-2/3">
+          <div className="hero">
+            <h1 className="HeroTitle">Our Mission</h1>
+            <p className="HeroDescription">
               We want to create a world where anyone can build something
               meaningful with technology, and everyone has the learning tools,
               resources, and opportunities to do so. Code contains a world of
@@ -53,14 +53,14 @@ const About = () => {
         </div>
       </div>
 
-      <div className="absolute left-0 top-10 hidden lg:block">
+      <div className="dots-left">
         <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
         <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
         <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
         <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
         <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
       </div>
-      <div className="absolute right-0 top-1/2 hidden lg:block">
+      <div className="dots-right">
       <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
       <img src={threeDots} alt="dots" className="w-40 xl:w-full" />
       <img src={threeDots} alt="dots" className="w-40 xl:w-full" />

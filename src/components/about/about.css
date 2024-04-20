@@ -1,0 +1,96 @@
+.container {
+    position: relative;
+    
+}
+
+.contact {
+    padding-bottom: 4rem;
+    padding: 0 12px;
+
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+}
+
+.contactTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0068D9;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.75rem/* 28px */;
+
+}
+
+
+.main-header {
+ 
+}
+
+.hero {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 1rem;
+padding-top: 2.5rem;
+text-align: center;
+}
+
+.HeroTitle {
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.HeroDescription {
+    font-size: 1.125rem/* 18px */;
+    line-height: 1.75rem/* 28px */;
+}
+
+.dots-left {
+    position: absolute;
+    display: none;
+    top: 2.5rem/* 40px */;
+    left: 0;
+
+}
+.dots-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: none;
+}
+.dots-img {
+    width: 10rem/* 160px */;
+}
+
+@media (min-width: 1280px) {
+    .dots-img {
+        width: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .dots-right {
+        display: block;
+    }
+    .dots-left {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .HeroDescription {
+        width: 66.666667%;
+    }
+}

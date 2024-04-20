@@ -6,10 +6,10 @@ const Testimonial = () => {
 
     const Testimonials = [
         {
-            name: "Dev amino",
+            name: "Dev zalaano",
             image: amino,
             quote: "“The beauty of LearnZone is that anyone, anywhere with an internet connection can learn from the world’s experts. Most courses are taught on demand, meaning you can take them at your own pace, and every course includes a discussion board where you can interact with the instructor and your fellow students. The best part is that most courses are free(!)… and even the paid courses cost far less than what you’d pay at a local college or university.”",
-            subTitle : "Software Engineer Student"
+            subTitle : "hard ware Engineer Student"
         },
         {
             name: "Jordan Mechaels",
