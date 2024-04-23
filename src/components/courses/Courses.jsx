@@ -13,6 +13,7 @@ const Courses = () => {
           </p>
         </div>
 
+
         {/* course list */}
         <div className="grid grid-cols-1  md:grid-cols-3 gap-4">
           {coursesList.map((course) => (
@@ -20,6 +21,8 @@ const Courses = () => {
               to={`/courses/${course.name}`}
               key={course.id}
               className="flex flex-col gap-5  rounded-md overflow-hidden shadow-md"
+
+            //   onClick=""
             >
               <div className="w-full h-1/2 bg-red-400">
                 <img

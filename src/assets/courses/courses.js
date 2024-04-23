@@ -9,7 +9,7 @@ import networking from "./networking.jpg";
 import primaryPro from "./adobepremiere.jpeg";
 import photoshop from "./photoshops.png";
 import backend from "./backend.png";
-import BasicOfComputer from "./Computer-Fundamentals.png";
+import BasicOfComputer from "./forex.jpeg";
 
 
 
