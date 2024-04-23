@@ -181,6 +181,8 @@ const Header = () => {
               </li>
             </ul>
 
+            {!user && (
+
             <div className="flex flex-col w-full gap-4">
               <button className="bg-primaryBlue text-center font-medium rounded-full p-2 text-white">
               <Link to="/sign-in" onClick={() => setOpen(false)}>
@@ -193,6 +195,8 @@ const Header = () => {
               </Link>
               </button>
             </div>
+            )}
+
           </div>
           <MdClose
             className="absolute top-3 right-3 text-secondary w-7 h-7 cursor-pointer"
