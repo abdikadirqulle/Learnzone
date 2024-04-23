@@ -18,7 +18,7 @@ const Courses = () => {
         <div className="grid grid-cols-1  md:grid-cols-3 gap-4">
           {coursesList.map((course) => (
             <Link
-              to={`/courses/${course.name}`}
+              to={`/courses/${course.id}`}
               key={course.id}
               className="flex flex-col gap-5  rounded-md overflow-hidden shadow-md"
 

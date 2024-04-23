@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Ai from "../../assets/images/Ai.webp"
 import platformImg from "../../assets/images/platform-hero.webp"
 
@@ -30,8 +31,10 @@ const CTA = () => {
           </span>
 
           <button className="bg-primaryBlue text-center text-white font-medium py-2 px-8 rounded-md md:rounded ml-3 flex gap-2 items-center justify-center">
+            <Link to="/courses" className="flex gap-2 items-center">
             Learn More
             <HiOutlineArrowNarrowRight className="w-6 h-6"/>
+            </Link>
           </button>
         </div>
 
@@ -76,7 +79,9 @@ export const AnotherCTA = () => {
           </span>
 
           <button className="bg-primaryBlue text-center text-white font-medium py-2 px-8 rounded-md md:rounded ml-3">
+          <Link to="/courses" className="">
             Get started
+          </Link>
           </button>
         </div>
 

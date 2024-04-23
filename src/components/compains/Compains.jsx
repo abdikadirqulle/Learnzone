@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { LocalBrands } from '../../assets/LocalBrands'
 import mentor from "../../assets/images/mentor.jpg"
 
@@ -81,20 +82,27 @@ export const Trused = () => {
 
 export const Mentor = () => {
     return (
-      <div className='max-w-6xl mx-auto  px-2 bg- p-4'>
+      <div className="max-w-6xl mx-auto  px-2 bg- p-4">
         <div className="flex flex-col md:flex-row justify-between gap-6 items-center">
           <img src={mentor} alt="Mentor" height={400} width={400} />
 
           <div className="flex flex-col items-center md:items-start gap-4 md:w-1/2">
             <h1 className="text-4xl font-bold text-tertiary">
-            Become an instructor
+              Become an instructor
             </h1>
-            <span className='font-medium text-xl text-center sm:text-start'>
+            <span className="font-medium text-xl text-center sm:text-start">
               Instructors from around the world teach millions of learners on
               LearnZone. We provide the tools and skills to teach what you love.
             </span>
 
-            <button type="button" className='bg-primaryBlue hover:bg-blue-500 text-white px-4 font-medium py-2 text-center rounded-sm'>Start Teaching Today</button>
+            <button
+              type="button"
+              className="bg-primaryBlue hover:bg-blue-500 text-white px-4 font-medium py-2 text-center rounded-sm"
+            >
+              <Link to="/courses" className="">
+                Start Teaching Today
+              </Link>
+            </button>
           </div>
         </div>
       </div>

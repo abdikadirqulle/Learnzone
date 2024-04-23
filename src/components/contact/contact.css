@@ -1,9 +1,20 @@
-/* *{
+:root {
+    --primary-color: #0068D9; /* Blue */
+    --secondary-color: #292E32; /* Gray */
+    --accent-color: #ffc107; /* Yellow */
+    --text-color: #333; /* Dark Gray */
+    --background-color: #fff; /* White */
+  }
+
+
+/* 
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Poppins', sans-serif;
-} */
+}  */
+
 /* body{
 	width: 100%;
 	min-height: 100vh;
@@ -12,13 +23,7 @@
 
 } */
 
-:root {
-    --primary-color: #0068D9; /* Blue */
-    --secondary-color: #292E32; /* Gray */
-    --accent-color: #ffc107; /* Yellow */
-    --text-color: #333; /* Dark Gray */
-    --background-color: #fff; /* White */
-  }
+
 /* #F3F4F6 */
 .container{
 	width: 100%;

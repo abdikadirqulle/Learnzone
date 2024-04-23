@@ -3,6 +3,7 @@ import "./contact.css"
 import { FaFacebook ,FaInstagram ,FaTwitter, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
+
 import { MdLocationPin } from "react-icons/md";
 const Contact = () => {
   return (
