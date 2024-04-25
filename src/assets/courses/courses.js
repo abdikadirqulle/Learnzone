@@ -1,15 +1,12 @@
 import html from "./html.jpg";
 import javascript from "./js.jpg";
 import python from "./python.jpg";
-import asp from "./aspnet.jpeg";
+import flutter from "./flutter.jpeg";
 import cpp from "./cpps.jpeg";
 import c from "./c.jpg";
 import git from "./git.jpg";
-import networking from "./networking.jpg";
-import primaryPro from "./adobepremiere.jpeg";
-import photoshop from "./photoshops.png";
-import backend from "./backend.png";
-import BasicOfComputer from "./forex.jpeg";
+import networking from "./networking.jpeg";
+import forex from "./forex.jpeg";
 
 
 
@@ -30,7 +27,7 @@ export const coursesList = [
   },
   {
     id: 2,
-    name: "Javascript for beginners",
+    name: "Javascript for Beginners",
     image: javascript,
     price: 9,
     oldPrice: 19,
@@ -38,7 +35,8 @@ export const coursesList = [
     teacherName: "Dugsiiye",
     courseHoure: "5.5 hours",
     description: "Ku Baro JavaScript luqada soomaliga somali programmers ",
-    courseVideoLink: "https://www.youtube.com/watch?v=aGjvA7p0WC0&t=43s&ab_channel=Dugsiiye",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=aGjvA7p0WC0&t=43s&ab_channel=Dugsiiye",
   },
   {
     id: 3,
@@ -49,8 +47,53 @@ export const coursesList = [
     rate: 4.9,
     teacherName: "CodeWithOmar",
     courseHoure: "5.1 hours",
-    description: "Course kaan waxaan ku baran doonnaa luqada ugu caansan programming-ka taa oo ah Python.    Course kaan  waxaa bixin doona intiisa badan Mr Sharafdin inta kalena aniga oo ah Eng Omar Tood. waxaad ku baran doontaa wax walba oo aad u baahan tahay si aad u qorto program Python ah, inagoo ka bilaabeyna bilow.",
-    courseVideoLink: "https://www.youtube.com/watch?v=s2MAVjZpTlw&ab_channel=CodeWithOmar",
+    description:
+      "Course kaan waxaan ku baran doonnaa luqada ugu caansan programming-ka taa oo ah Python.    Course kaan  waxaa bixin doona intiisa badan Mr Sharafdin inta kalena aniga oo ah Eng Omar Tood. waxaad ku baran doontaa wax walba oo aad u baahan tahay si aad u qorto program Python ah, inagoo ka bilaabeyna bilow.",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=s2MAVjZpTlw&ab_channel=CodeWithOmar",
+  },
+  {
+    id: 9,
+    name: "Flutter Mobile App Development",
+    image: flutter,
+    price: 17,
+    oldPrice: 29,
+    rate: 4.8,
+    teacherName: "Ahmedtiger",
+    courseHoure: "3 hours",
+    description:
+      "In this course, you'll learn how to use Flutter to quickly develop high-quality, interactive mobile applications for iOS and Android devices",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=OyjwCeEr5Vo&t=1850s&ab_channel=Dugsiiye",
+  },
+  {
+    id: 5,
+    name: "Computer Networking Course",
+    image: networking,
+    price: 9,
+    oldPrice: 14,
+    rate: 4.8,
+    teacherName: "freeCodeCamp",
+    courseHoure: "9 hours",
+    description:
+      "This full college-level computer networking course will prepare you to configure, manage, and troubleshoot computer networks. It will also help you prepare for CompTIA's Network+ exam.",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=qiQR5rTSshw&ab_channel=freeCodeCamp.org",
+  },
+
+  {
+    id: 6,
+    name: "Full forex course",
+    image: forex,
+    price: 12,
+    oldPrice: 15,
+    rate: 4.6,
+    teacherName: "Moalimuufx",
+    courseHoure: "2.5 hours",
+    description:
+      "Muuqaalkaan Dheer Waxa aan kusoo koobay, macluumaad soo koobaya dhammaan waxyaalaha muhiimka ah ee ay tahay in qofkasta oo Trader ah uu ogaado ka hor inta uusan suuqan si full time ah u dhex galin. ",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=sNdMp7rQ_DA&t=2600s&ab_channel=Moalimuufx",
   },
   {
     id: 4,
@@ -61,32 +104,10 @@ export const coursesList = [
     rate: 4.6,
     teacherName: "ProgrammingwithMosh",
     courseHoure: "1 hours",
-    description: "Learn C++ basics in 1 hour! 🚀 This beginner-friendly tutorial is your fast start for this powerful language.",
-    courseVideoLink: "https://www.youtube.com/watch?v=ZzaPdXTrSb8&ab_channel=ProgrammingwithMosh",
-  },
-  {
-    id: 5,
-    name: "Computer Networking Course - Network Engineering [CompTIA Network+ Exam Prep]",
-    image: networking,
-    price: 9,
-    oldPrice: 14,
-    rate: 4.8,
-    teacherName: "freeCodeCamp",
-    courseHoure: "9 hours",
-    description: "This full college-level computer networking course will prepare you to configure, manage, and troubleshoot computer networks. It will also help you prepare for CompTIA's Network+ exam.",
-    courseVideoLink: "https://www.youtube.com/watch?v=qiQR5rTSshw&ab_channel=freeCodeCamp.org",
-  },
-  {
-    id: 6,
-    name: "Full forex course",
-    image: BasicOfComputer,
-    price: 12,
-    oldPrice: 15,
-    rate: 4.6,
-    teacherName: "Moalimuufx",
-    courseHoure: "2.5 hours",
-    description: "Muuqaalkaan Dheer Waxa aan kusoo koobay, macluumaad soo koobaya dhammaan waxyaalaha muhiimka ah ee ay tahay in qofkasta oo Trader ah uu ogaado ka hor inta uusan suuqan si full time ah u dhex galin. ",
-    courseVideoLink: "https://www.youtube.com/watch?v=sNdMp7rQ_DA&t=2600s&ab_channel=Moalimuufx",
+    description:
+      "Learn C++ basics in 1 hour! 🚀 This beginner-friendly tutorial is your fast start for this powerful language.",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=ZzaPdXTrSb8&ab_channel=ProgrammingwithMosh",
   },
   {
     id: 7,
@@ -98,55 +119,8 @@ export const coursesList = [
     teacherName: "freeCodeCamp",
     courseHoure: "4 hours",
     description: "welcome",
-    courseVideoLink: "https://www.youtube.com/watch?v=KJgsSFOSQv0&ab_channel=freeCodeCamp.org",
-  },
-  {
-    id: 8,
-    name: "Backend development",
-    image: backend,
-    price: 12,
-    oldPrice: 15,
-    rate: 4.6,
-    teacherName: "hamuoda",
-    courseHoure: "7.5 hours",
-    description: "welcome",
-    courseVideoLink: "",
-  },
-  {
-    id: 9,
-    name: "Asp.net",
-    image: asp,
-    price: 12,
-    oldPrice: 15,
-    rate: 4.6,
-    teacherName: "Abdikarim gelle",
-    courseHoure: "7.5 hours",
-    description: "welcome",
-    courseVideoLink: "",
-  },
-  {
-    id: 10,
-    name: "Adobe premiere pro",
-    image: primaryPro,
-    price: 12,
-    oldPrice: 15,
-    rate: 4.6,
-    teacherName: "najmo",
-    courseHoure: "7.5 hours",
-    description: "welcome",
-    courseVideoLink: "",
-  },
-  {
-    id: 11,
-    name: "Adobe Photoshop",
-    image: photoshop,
-    price: 12,
-    oldPrice: 15,
-    rate: 4.6,
-    teacherName: "najmo",
-    courseHoure: "7.5 hours",
-    description: "welcome",
-    courseVideoLink: "",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=KJgsSFOSQv0&ab_channel=freeCodeCamp.org",
   },
   {
     id: 12,
@@ -155,9 +129,10 @@ export const coursesList = [
     price: 12,
     oldPrice: 15,
     rate: 4.6,
-    teacherName: "duraanAli",
-    courseHoure: "7.5 hours",
-    description: "welcome",
-    courseVideoLink: "",
+    teacherName: "Abdifitah abdilahi",
+    courseHoure: "2 hours",
+    description: "Git and GitHub Somali - Full Course",
+    courseVideoLink:
+      "https://www.youtube.com/watch?v=Qsu0iZA2Sv8&ab_channel=Somcoders",
   },
 ];

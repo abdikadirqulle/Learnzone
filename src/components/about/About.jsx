@@ -3,7 +3,7 @@ import "./about.css"
 
 const About = () => {
   return (
-    <div className="relative w-full h-full pb-10">
+    <div className="relative w-full h-full pb-10 pt-[6rem]">
       <div className="contact max-w-6xl mx-auto  ">
         <div className="main">
           <div className="header">

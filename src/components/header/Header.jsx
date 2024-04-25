@@ -17,59 +17,17 @@ const Header = () => {
     return null;
   }
 
-  // const toggle = () => setOpen(!open);
-  // const menuRef = useRef()
-
-  // window.addEventListener("scroll", function () {
-  //     const header = document.querySelector(".headers");
-  //     if (window.scrollY >= 10) {
-  //       header.style.backgroundColor = "";
-  //       header.classList.add = "";
-  //     } else {
-  //       header.style.backgroundColor = "";
-  //     }
-  //   });
-
-  //   const scrollToTop = () => {
-  //     window.scrollTo({
-  //       top: 0,
-  //       behavior: "smooth",
-  //     });
-
-  //     setCurrentPage("home");
-  //     setOpen(false);
-  //   };
-
-  //   useEffect(() => {
-  //     // const handleClickOutside = (event) => {
-  //     //   if (menuRef.current && !menuRef.current.contains(event.target)) {
-  //     //     setOpen(false);
-  //     //   }
-  //     // };
-
-  //     const handleEscape = (event) => {
-  //       if (event.key === "Escape") {
-  //         setOpen(false);
-  //       }
-  //     };
-
-  //     if (open) {
-  //       document.addEventListener("mousedown", handleClickOutside);
-  //       document.addEventListener("keydown", handleEscape);
-  //     } else {
-  //       document.removeEventListener("mousedown", handleClickOutside);
-  //       document.removeEventListener("keydown", handleEscape);
-  //     }
-
-  //     return () => {
-  //       document.removeEventListener("mousedown", handleClickOutside);
-  //       document.removeEventListener("keydown", handleEscape);
-  //     };
-  //   }, [open]);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "auto",
+    });
+    setOpen(false);
+  };
 
   return (
     <nav className="headers relative max-w-6xl mx-auto  flex items-center justify-between px-4 py-2">
-      <Link to="/" className="flex gap-2 flex-nowrap items-center" onClick={() => setOpen(false)}>
+      <Link to="/" className="flex gap-2 flex-nowrap items-center" onClick={scrollToTop}>
         <BsMortarboard className="w-7 h-7 text-primary" />
         <h1 className="text-2xl text-primary font-bold cursor-pointer">
           LearnZone
@@ -83,28 +41,28 @@ const Header = () => {
               pathname === "/" ? "font-bold text-primary" : "font-normal"
             }  `}
           >
-            <Link to="">Home</Link>
+            <Link to="" onClick={scrollToTop}>Home</Link>
           </li>
           <li
             className={`${
               pathname === "/about" ? "font-bold text-primary" : "font-normal"
             }  `}
           >
-            <Link to="about">About</Link>
+            <Link to="about" onClick={scrollToTop}>About</Link>
           </li>
           <li
             className={`${
               pathname === "/courses" ? "font-bold text-primary" : "font-normal"
             }  `}
           >
-            <Link to="courses">Courses</Link>
+            <Link to="courses" onClick={scrollToTop}>Courses</Link>
           </li>
           <li
             className={`${
               pathname === "/contact" ? "font-bold text-primary" : "font-normal"
             }  `}
           >
-            <Link to="contact">Contact Us</Link>
+            <Link to="contact" onClick={scrollToTop}>Contact Us</Link>
           </li>
         </ul>
       </nav>
@@ -142,7 +100,7 @@ const Header = () => {
                   pathname === "/" ? "font-bold text-primary" : "font-medium"
                 }`}
               >
-                <Link to="" onClick={() => setOpen(false)}>
+                <Link to="" onClick={scrollToTop}>
                   Home
                 </Link>
               </li>
@@ -153,7 +111,7 @@ const Header = () => {
                     : "font-medium"
                 }`}
               >
-                <Link to="about" onClick={() => setOpen(false)}>
+                <Link to="about" onClick={scrollToTop}>
                   About
                 </Link>
               </li>
@@ -164,7 +122,7 @@ const Header = () => {
                     : "font-medium"
                 }`}
               >
-                <Link to="courses" onClick={() => setOpen(false)}>
+                <Link to="courses" onClick={scrollToTop}>
                   Courses
                 </Link>
               </li>
@@ -175,7 +133,7 @@ const Header = () => {
                     : "font-medium"
                 }`}
               >
-                <Link to="contact" onClick={() => setOpen(false)}>
+                <Link to="contact" onClick={scrollToTop}>
                   Contact Us
                 </Link>
               </li>

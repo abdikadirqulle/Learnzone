@@ -1,13 +1,13 @@
 
 import Menu from './menu/Menu';
 import Compains, { Mentor, Trused } from './compains/Compains';
-import Courses from './courses/Courses';
 import Testimonial from './testmonial/Testimonial';
 import CTA from './about/CTA';
+import Courses from './courses/Courses';
 
 const Hero = () => {
   return (
-    <div className=" h-full flex flex-col gap-10 md:pt-[2rem]">
+    <div className=" h-full flex flex-col gap-10 pt-[6rem] ">
       {/* Menu  */}
       <Menu />
       {/* Trusted*/}
@@ -16,7 +16,7 @@ const Hero = () => {
       <CTA />
       {/* Courses*/}
       {/* <Courses /> */}
-      courses 
+     <Courses />
       {/* testimonial */}
       <Testimonial />
       {/* another Trusted */}

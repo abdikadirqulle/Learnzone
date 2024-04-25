@@ -33,6 +33,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 30px 8%;
+    padding-top: 6rem;
 }
 .container .row{
 	display: flex;
@@ -52,6 +53,7 @@
 .row section.right{
 	flex-basis: 60%;
 }
+
 section.left .contactTitle h2{
 	position: relative;
 	font-size: 28px;

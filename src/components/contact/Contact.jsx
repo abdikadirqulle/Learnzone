@@ -7,14 +7,14 @@ import { MdEmail } from "react-icons/md";
 import { MdLocationPin } from "react-icons/md";
 const Contact = () => {
   return (
-    <div className="container">
+    <div className="container ">
       <main className="row">
         {/* <!--  *******   Left Section (Column) Starts   *******  --> */}
 
         <section className="col left">
           {/* <!--  *******   Title Starts   *******  --> */}
 
-          <div className="contactTitle">
+          <div className="contactTitle ">
             <h2>Get In Touch</h2>
             <p>If you have any question or simply want to contact with us</p>
           </div>

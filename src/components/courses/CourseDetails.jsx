@@ -2,17 +2,41 @@
 import { useParams } from "react-router-dom"
 import { coursesList } from "../../assets/courses/courses";
 import ReactPlayer from "react-player";
-
+import courseBgImg from "../../assets/images/course-bg.webp"
+import { useEffect } from "react";
 const CourseDetails = () => {
     const { id } = useParams();
     const course = coursesList.find(course => course.id === parseInt(id));
   
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+    },[])
+
     if (!course) {
       return <div>Product not found!</div>;
     }
-
     return (
-      <div className="max-w-6xl mx-auto px-2 pb-3">
+        <div className="space-y-2 pt-[3rem]">
+                {/* cover img and txt */}
+            <div className="relative w-full h-[23rem] bg-cover bg-no-repeat bg-center" 
+            // style={{backgroundImage: `url('${courseBgImg}')`}} 
+            style={{background: `url(${courseBgImg}) 0% 0% / cover no-repeat`}}
+            >
+            <div className="flex flex-col max-w-6xl mx-auto py-16 z-50">
+                <div className="w-1/2">
+                <h1 className="text-3xl text-white font-bold ">{course.name}</h1>
+                <p>{course.description}</p>
+                </div>
+            </div>
+
+
+            <div className="absolute inset-0 w-full h-full bg-blue-400 bg-opacity-90"></div>
+            </div>
+
+      <div className="max-w-6xl mx-auto px-2 pb-3 ">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-4 lg:flex-row ">
             {/* course video */}
@@ -43,6 +67,7 @@ const CourseDetails = () => {
 
             </div>
           </div>
+        </div>
         </div>
       </div>
     );

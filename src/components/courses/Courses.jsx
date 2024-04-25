@@ -3,8 +3,9 @@ import { coursesList } from "../../assets/courses/courses"
 
 
 const Courses = () => {
+
   return (
-    <div className="max-w-6xl  mx-auto cursor-pointer">
+    <div className="max-w-6xl  mx-auto cursor-pointer py-4 px-2 pt-[6rem]">
       <div className="flex flex-col gap-10 ">
         <div className="flex flex-col items-center gap-2">
           <h1 className="text-2xl font-medium text-primary">Courses</h1>
@@ -31,18 +32,22 @@ const Courses = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-
               {/* course describtion */}
-              <div className="flex flex-col gap-6 px-4  w-full h-full">
+              <div className="flex flex-col gap-6 px-4  w-full h-full">                
                 <div className="flex flex-col gap-0">
                   <h1 className="font-bold text-lg text-secondary">
                     {course.name}
                   </h1>
-                  <span className="font-light">{course.teacherName}</span>
+                  <span className="font-light text-sm">{course.teacherName}</span>
                 </div>
-                <h1 className="font-semibold text-3xl text-green-600">
-                  ${course.price}.99
+                <div className="flex flex-col gap-1">
+                <h1 className="font-semibold text-xl line-through text-red-600">
+                  ${course.oldPrice}.99 Ending Soon
                 </h1>
+                <h1 className="font-semibold text-xl text-green-600">
+                  ${course.price}.99 For Life Time Access
+                </h1>
+                </div>
               </div>
             </Link>
           ))}
