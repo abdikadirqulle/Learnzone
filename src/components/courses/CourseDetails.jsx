@@ -198,7 +198,7 @@ export const CourseContent = ({title, id}) => {
                 <p className="text-lg">Video List</p>
               </div>
 
-              <p className="text-lg">Time</p>
+              <p className="text-lg">10:19</p>
             </div>
           </div>
         )}
