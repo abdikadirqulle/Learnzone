@@ -8,8 +8,9 @@ const Courses = () => {
     <div className="max-w-6xl  mx-auto cursor-pointer py-4 px-2 pt-[6rem]">
       <div className="flex flex-col gap-10 ">
         <div className="flex flex-col items-center gap-2">
-          <h1 className="text-2xl font-medium text-primary">Courses</h1>
-          <p className="text-secondary text-lg font-medium">
+          <h1 className="text-xl font-bold text-primary">COURSES</h1>
+          <h1 className="text-4xl font-bold ">Popular Courses</h1>
+          <p className="text-[#6B7280] text-lg font-medium">
             The Best course?. Learn anytime & anywhere.
           </p>
         </div>
@@ -25,7 +26,7 @@ const Courses = () => {
 
             //   onClick=""
             >
-              <div className="w-full h-1/2 bg-red-400">
+              <div className="w-full h-1/2">
                 <img
                   src={course.image}
                   alt={course.name}
@@ -42,10 +43,10 @@ const Courses = () => {
                 </div>
                 <div className="flex flex-col gap-1">
                 <h1 className="font-semibold text-xl line-through text-red-600">
-                  ${course.oldPrice}.99 Ending Soon
+                  ${course.oldPrice}.00 Ending Soon
                 </h1>
                 <h1 className="font-semibold text-xl text-green-600">
-                  ${course.price}.99 For Life Time Access
+                  ${course.price}.00 For Life Time Access
                 </h1>
                 </div>
               </div>

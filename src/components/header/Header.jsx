@@ -12,10 +12,10 @@ const Header = () => {
   const { pathname } = location;
   const { user, isLoaded } = useUser();
 
-  if (!isLoaded) {
-    // Handle loading state however you like
-    return null;
-  }
+//   if (!isLoaded) {
+//     // Handle loading state however you like
+//     return null;
+//   }
 
   const scrollToTop = () => {
     window.scrollTo({
