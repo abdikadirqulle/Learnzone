@@ -1,22 +1,19 @@
-import { useState } from "react";
+import {  useContext, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import image from "../../assets/image.png"
 
 import { FiMenu } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import { BsMortarboard } from "react-icons/bs";
-import {   UserButton, useUser } from "@clerk/clerk-react";
+import { AuthContext } from "../../context/AuthContext";
 
-const Header = () => {
+const Header =  () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const { pathname } = location;
-  const { user, isLoaded } = useUser();
 
-//   if (!isLoaded) {
-//     // Handle loading state however you like
-//     return null;
-//   }
-
+  const { user } = useContext(AuthContext)
+//  console.log("header user : ", user)
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -80,9 +77,22 @@ const Header = () => {
             </button>
           </Link>
         </div>
-      )}
+         )} 
       <div className="flex items-center gap-4">
-        <UserButton />
+        {user && (
+          <div className="flex items-center gap-4">
+              <p>{user.name}</p>
+            <img
+              src={image}
+              alt={user.name}
+              className="rounded-full cursor-pointer w-12 h-12 object-cover"
+            />
+          </div>
+        )}
+        {user.type === "admin" && (
+            <Link to="/dashboard" className="font-medium text-base bg-blue-300 rounded-md p-2">Dashboard</Link>
+        )}
+        {/* <UserButton /> */}
         <FiMenu
           className="w-7 h-7 cursor-pointer md:hidden"
           onClick={() => setOpen(true)}
@@ -153,7 +163,7 @@ const Header = () => {
               </Link>
               </button>
             </div>
-            )}
+               )}  
 
           </div>
           <MdClose

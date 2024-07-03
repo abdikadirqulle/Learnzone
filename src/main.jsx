@@ -9,18 +9,12 @@ import Courses from './components/courses/Courses.jsx';
 import Contact from './components/contact/Contact.jsx';
 import NotFound from './components/not-found.jsx';
 import CourseDetails from './components/courses/CourseDetails.jsx';
-import { ClerkProvider } from '@clerk/clerk-react';
 
-import { SignUpPage } from './auth/sign-up/SignUp.jsx';
-import SignInPage from './auth/sign-in/[[...index]].jsx';
-
-
-// Import your publishable key
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+import  SignUpPage  from './auth/sign-up/SignUp.jsx';
+import SignInPage from './auth/sign-in/SignIn.jsx';
+import Dashboard from './dashboard/Dashboard.jsx';
+import { AuthProvider } from './context/AuthContext.jsx';
  
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Publishable Key")
-}
 
 
 const router = createBrowserRouter([
@@ -58,13 +52,18 @@ const router = createBrowserRouter([
             path: "/sign-up",
             element: <SignUpPage />
         },
+       
       ]
+    },
+    {
+        path: "/dashboard",
+        element: <Dashboard />
     },
   ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ClerkProvider  publishableKey={PUBLISHABLE_KEY}>
+    <AuthProvider >
     <RouterProvider router={router}/>
-    </ClerkProvider>
+    </AuthProvider>
   </React.StrictMode>
 )

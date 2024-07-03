@@ -1,10 +1,10 @@
 
 import { Link } from "react-router-dom";
 import visual from "../../assets/images/visual.png";
-import { useUser } from "@clerk/clerk-react";
+
 
 const Menu = () => {
-    const {user} = useUser()
+    const user = ""
   return (
     <div className="max-w-6xl mx-auto  px-2 flex flex-col md:flex-row items-center  justify-between gap-6 pt-4">
       <div className="flex flex-col items-center md:items-start space-y-16">

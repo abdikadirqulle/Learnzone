@@ -4,7 +4,6 @@ import { coursesList } from "../../assets/courses/courses";
 import ReactPlayer from "react-player";
 import courseBgImg from "../../assets/images/course-bg.webp"
 import { useEffect, useState } from "react";
-import { useUser } from "@clerk/clerk-react";
 
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { GoListOrdered } from "react-icons/go";
@@ -17,7 +16,7 @@ const CourseDetails = () => {
 
     const { id } = useParams();
     const course = coursesList.find(course => course.id === parseInt(id));
-    const {user} = useUser();
+    const user = "daadaa";
 
     useEffect(() => {
         window.scrollTo({

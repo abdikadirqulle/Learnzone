@@ -1,8 +1,11 @@
 import { Outlet } from "react-router-dom";
 
-import Header from "./components/header/Header";
 import Footer from "./components/footer/footer";
+
 import { useEffect, useState } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Header from "./components/header/Header";
 
 const App = () => {
     const [hasShadow, setHasShadow] = useState(false);
@@ -35,6 +38,7 @@ const App = () => {
         <Outlet />
       </div>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
