@@ -6,22 +6,27 @@ import mentor from "../../assets/images/mentor.jpg"
 const members = [
     {
         rate : "25k",
+        id : 1,
         name : "Classes",
     },
     {
         rate : "600K+",
+        id : 2,
         name : "Members",
     },
     {
         rate : "300+",
+        id : 3,
         name : "Institutions",
     },
     {
         rate : "8k",
+        id : 4,
         name : "Teachers",
     },
     {
         rate : "15,000+",
+        id : 5,
         name : "Enterprise customers",
     },
 ]
@@ -35,16 +40,14 @@ const Compains = () => {
             We collaborate with leading education providers and organisations
           </h1>
           <div className="flex gap-4 flex-wrap items-center justify-center xl:justify-start">
-            {LocalBrands.map((brands) => (
-              <>
+            {LocalBrands.map((index, brands) => (
                 <div className="" key={brands.id}>
                   <img
                     src={brands.image}
-                    alt="photo"
+                    alt="photos"
                     className="w-[5rem] h-[5rem] md:w-[8rem] md:h-[8rem] xl:w-[7.5rem] object-contain"
                   />
                 </div>
-              </>
             ))}
           </div>
         </div>
@@ -62,9 +65,8 @@ export const Trused = () => {
     return (
       <div className='bg-primaryBlue py-10 '>
         <div className="max-w-6xl mx-auto  px-2 flex flex-wrap items-center justify-center md:justify-between gap-4 ">
-          {members.map((index, member) => (
-            <>
-              <div key={index} className="rounded-md px-10 py-5 flex flex-col items-center justify-center ">
+          {members.map(( member) => (
+              <div key={member.id} className="rounded-md px-10 py-5 flex flex-col items-center justify-center ">
                 <h1 className="text-3xl font-extrabold text-white ">
                   {member.rate}
                 </h1>
@@ -72,7 +74,6 @@ export const Trused = () => {
                   {member.name}
                 </h1>
               </div>
-            </>
           ))}
         </div>
       </div>

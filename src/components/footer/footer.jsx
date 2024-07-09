@@ -26,7 +26,7 @@ const Footer = () => {
 
         <div className="credit">
           &copy; copyright @ 2024 by{" "}
-          <span style={{}} className="text-primary ">
+          <span style={{}} className="text-white ">
             learn zone
           </span>{" "}
           | all rights reserved!

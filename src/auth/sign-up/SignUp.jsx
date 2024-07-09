@@ -1,54 +1,92 @@
-// SignInPage.js
-import  { useContext, useEffect, useState } from 'react';
-import axios from 'axios';
-import { AuthContext } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const SignInPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [type, setType] = useState('');
-  const {user} = useContext(AuthContext)
-  const navigate = useNavigate()
 
-  const handleSignup = async (e) => {
+
+export default function SignUp() {
+
+
+  const [formData, setFormData] = useState({});
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/user/register-user', {
-        name,
-        email,
-        password,
-        type
+      setLoading(true);
+      setError(false);
+      const res = await fetch('http://localhost:3000/api/user/register-user', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        // body: JSON.stringify(formData),
       });
-      alert(response.data.message);
-      // Redirect or handle success as needed
-    //   alert("register successfully");
+      const data = await res.json();
+      console.log("data :", data);
+      setLoading(false);
+      if (data.success === false) {
+        setError(true);
+        return;
+      }
+      alert("signup successfuly")
+      navigate('/sign-in');
     } catch (error) {
-      alert('Signup failed. Please try again.', error);
-      console.error('Error signing up:', error);
+        alert(error)
+      setLoading(false);
+      setError(true);
     }
   };
 
 
   useEffect(() => {
-    if(user){
-    //   toast.success("You already logged in");
-      navigate("/courses");
-    }
-  }, []);
+
+  })
   return (
-        <div  className="flex flex-col border border-black items-center justify-center py-10 pb-40 pt-[6rem]">
-
-    <form onSubmit={handleSignup} className='flex flex-col'>
-      <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" required />
-      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required />
-      <input type="text" value={type} onChange={(e) => setType(e.target.value)} placeholder="Type" required />
-      <button type="submit">Sign Up</button>
-    </form>
-        </div>
+    <div className="p-3 py-[10rem] max-w-lg mx-auto">
+      <h1 className="text-3xl text-center font-semibold my-7">Sign Up</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col  gap-4">
+        <input
+          type="text"
+          placeholder="name"
+          id="name"
+          className="bg-slate-100 p-3 rounded-lg"
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          className="bg-slate-100 p-3 rounded-lg"
+          onChange={handleChange}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          className="bg-slate-100 p-3 rounded-lg"
+          onChange={handleChange}
+        />
+        <button
+          disabled={loading}
+          className="bg-primaryBlue text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+        >
+          {loading ? "Loading..." : "Sign Up"}
+        </button>
+      </form>
+      <div className="flex gap-2 mt-5">
+        <p>Have an account?</p>
+        <Link to="/sign-in">
+          <span className="text-blue-500">Sign in</span>
+        </Link>
+      </div>
+      <p className="text-red-700 mt-5">{error && "Something went wrong!"}</p>
+    </div>
   );
-};
-
-export default SignInPage;
+}

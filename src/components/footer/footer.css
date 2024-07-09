@@ -1,5 +1,5 @@
 .footer{
-    background-color:rgb(79, 90, 101);
+    background-color: #0068D9;
     /* text-align: ; */
     padding-bottom: 16px;
     width: 50;
@@ -38,7 +38,7 @@ a {
     justify-content: center;
 }
 .footer .share a:hover{
-    background-color: #0068D9;
+    background-color: #3b85d4;
 
 }
 .footer .credite{

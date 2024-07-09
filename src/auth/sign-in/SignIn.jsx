@@ -1,118 +1,93 @@
-import { useContext, useEffect, useState } from "react";
-import Image from "../../assets/image.png";
-import Logo from "../../assets/logo.png";
-import GoogleSvg from "../../assets/icons8-google.svg";
-import { FaEye } from "react-icons/fa6";
-import { FaEyeSlash } from "react-icons/fa6";
-import "./Login.css";
+import {  useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
-import { toast } from "react-toastify";
-import { AuthContext } from "../../context/AuthContext";
+import {useDispatch, useSelector} from  "react-redux";
+import {
+    signInStart,
+    signInSuccess,
+    signInFailure,
+  } from '../../redux/user/userSlice.js';
+
+
 
 const Login = () => {
-  const [showPassword, setShowPassword] = useState(false);
-//   const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("token")) || "");
-  const navigate = useNavigate();
- const {user} = useContext(AuthContext)
-
-
-  const handleLoginSubmit = async (e) => {
-    e.preventDefault();
-    let email = e.target.email.value;
-    let password = e.target.password.value;
-
-    if (email.length > 0 && password.length > 0) {
-      const formData = {
-        email,
-        password,
+    const [formData, setFormData] = useState({});
+    const { loading, error } = useSelector((state) => state.user);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
       };
-      try {
-        const response = await axios.post(
-          "http://localhost:3000/api/user/login-user",
-          formData
-        );
-        localStorage.setItem('token', JSON.stringify(response.data.token));
-        toast.success("Login successfull");
-        navigate("/courses");
-      } catch (err) {
-        console.log(err);
-        toast.error(err.message);
-      }
-    } else {
-      toast.error("Please fill all inputs");
-    }
-  };
 
-  useEffect(() => {
-    if(user){
-    //   toast.success("You already logged in");
-      navigate("/courses");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        dispatch(signInStart());
+        const res = await fetch("http://localhost:3000/api/user/login-user", {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+        const data = await res.json();
+        console.log(data)
+        if (data.success === false) {
+          dispatch(signInFailure(data));
+          return;
+        }
+        dispatch(signInSuccess(data));
+        navigate('/');
+      } catch (error) {
+        dispatch(signInFailure(error));
+        alert(error.message);
+      }
     }
-  }, []);
+
+//   useEffect(() => {
+//     if(user){
+//     //   toast.success("You already logged in");
+//       navigate("/courses");
+//     }
+//   }, []);
 
   return (
-    <div className="login-main">
-      <div className="login-left">
-        <img src={Image} alt="" />
+    <div className="p-3 py-[10rem] max-w-lg mx-auto">
+      <h1 className="text-3xl text-center font-semibold my-7">Sign In</h1>
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          className="bg-slate-100 p-3 rounded-lg"
+          onChange={handleChange}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          className="bg-slate-100 p-3 rounded-lg"
+          onChange={handleChange}
+          required
+        />
+        <button
+          disabled={loading}
+          className="bg-primaryBlue text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+        >
+          {loading ? "Loading..." : "Sign In"}
+        </button>
+        {/* <OAuth /> */}
+      </form>
+      <div className="flex gap-2 mt-5">
+        <p>Dont Have an account?</p>
+        <Link to="/sign-up">
+          <span className="text-blue-500">Sign up</span>
+        </Link>
       </div>
-      <div className="login-right">
-        <div className="login-right-container">
-          <div className="login-logo">
-            <img src={Logo} alt="" />
-          </div>
-          <div className="login-center">
-            <h2>Welcome back!</h2>
-            <p>Please enter your details</p>
-            <form onSubmit={handleLoginSubmit}>
-              <input type="email" placeholder="Email" name="email" />
-              <div className="pass-input-div">
-                <input
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Password"
-                  name="password"
-                />
-                {showPassword ? (
-                  <FaEyeSlash
-                    onClick={() => {
-                      setShowPassword(!showPassword);
-                    }}
-                  />
-                ) : (
-                  <FaEye
-                    onClick={() => {
-                      setShowPassword(!showPassword);
-                    }}
-                  />
-                )}
-              </div>
-
-              <div className="login-center-options">
-                <div className="remember-div">
-                  <input type="checkbox" id="remember-checkbox" />
-                  <label htmlFor="remember-checkbox">
-                    Remember for 30 days
-                  </label>
-                </div>
-                <a href="#" className="forgot-pass-link">
-                  Forgot password?
-                </a>
-              </div>
-              <div className="login-center-buttons">
-                <button type="submit">Log In</button>
-                <button type="submit">
-                  <img src={GoogleSvg} alt="" />
-                  Log In with Google
-                </button>
-              </div>
-            </form>
-          </div>
-
-          <p className="login-bottom-p">
-            Don&apos;t have an account? <Link to="/sign-up">Sign Up</Link>
-          </p>
-        </div>
-      </div>
+      <p className="text-red-700 mt-5">
+        {error ? error.message || "Something went wrong!" : ""}
+      </p>
     </div>
   );
 };
